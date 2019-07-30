@@ -4,4 +4,4 @@ This repositories contains materials related to some of the interesting problems
 
 ## Table of Contents
 
-* [Palindrome Series] (https://github.com/trang-nguyenn/Algorithms): Solutions and discussions on characteristics and methodology to solve Palindrome problem series
+* [Palindrome Series](https://github.com/trang-nguyenn/Algorithms): Solutions and discussions on characteristics and methodology to solve Palindrome problem series
