@@ -8,10 +8,10 @@
 
 # Example:
 1. Problem: Decoder: Number to String
-‘123’ to ??
-‘1’+’23’ to A, X
-’12’+ ‘3’ to M, C
-String (‘ABC’) to (1)
+- ‘123’ to ??
+- ‘1’+’23’ to A, X
+- ’12’+ ‘3’ to M, C
+- String (‘ABC’) to (1)
 
 2. Algorithm: 
 -	Dfs divide num (1,23), (1,2,3), (1,23)
