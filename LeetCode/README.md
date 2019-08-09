@@ -20,3 +20,8 @@
 3. Code:
 
 4. Test code on LeetCode: https://leetcode.com/problems/decode-ways/
+
+5. Further Discussions
+- Smaller problem
+- Extend the concept to solve a more generalized problem
+- Comparison: how this problem differs, similar, etc. to other problems that you've done.
