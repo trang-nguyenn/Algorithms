@@ -25,3 +25,6 @@
 - Smaller problem
 - Extend the concept to solve a more generalized problem
 - Comparison: how this problem differs, similar, etc. to other problems that you've done.
+
+
+** Draw figures using Visio or draw.io
