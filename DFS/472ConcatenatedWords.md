@@ -31,8 +31,8 @@ def check(word, ref):
  ```python
  def check(word, ref):
     dp = [None] * len(word)
-    for i in range(len(word), 0, -1):
-        if word[:i] in ref: dp[i]
+    (to be updated)
+       
  ```
  
  
@@ -43,5 +43,25 @@ def check(word, ref):
  ## Code
  
  ```python
- 
+ class Solution(object):
+    def findAllConcatenatedWordsInADict(self, words):
+        """
+        :type words: List[str]
+        :rtype: List[str]
+        """
+        ans, ref = [], set(words)
+        
+        for word in words:
+            ref.remove(word)
+            if self.check(word, ref) == True:
+                ans.append(word)
+            ref.add(word)
+        return ans
+    
+    def check(self, w, d):
+        if w in d: return True
+        for i in range(len(w),0, -1):
+            if w[:i] in d and self.check(w[i:], d) == True:
+                return True
+        return False
  ```
