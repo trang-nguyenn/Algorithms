@@ -13,7 +13,7 @@ for word in ref:
     ref.add(word)   
 ```
 
-Note that this `check()` function can be done either by recursive or iterative calls.
+Note that this `check()` function can be done either by recursive, DP, or stack calls.
 
 ##### Recursive
 ```python
