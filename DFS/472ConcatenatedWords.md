@@ -31,7 +31,7 @@ def check(word, ref):
  ```python
  def check(word, ref):
     dp = [None] * len(word)
-    for i in range(len(word)):
+    for i in range(len(word), 0, -1):
         if word[:i] in ref: dp[i]
  ```
  
