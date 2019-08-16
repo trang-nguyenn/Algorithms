@@ -27,8 +27,8 @@ def check(word, ref):
  ```
  
  
- ##### DP
- ```python
+ ##### DP (make ref to: https://leetcode.com/problems/word-break-ii/discuss/44169/9-lines-Python-10-lines-C%2B%2B)
+ ```python)
  def check(word, ref):
     dp = [None] * len(word)
     (to be updated)
