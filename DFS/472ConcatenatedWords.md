@@ -27,13 +27,16 @@ def check(word, ref):
  ```
  
  
- ##### Iterative
+ ##### DP
  ```python
  def check(word, ref):
     dp = [None] * len(word)
     (to be updated)
        
  ```
+ 
+ 
+ ##### Stack
  
  
  ## Discussions
