@@ -1,6 +1,6 @@
 Aug 16:
 
-Developed from the examples from the concanated words, we can either use DP (preferably with memo) for DFS to search over the data structure, I can solve a variety of hard problems today.
+Developed from the examples from the concanated words, we can either use DP (preferably with memo) or DFS to search over the data structure. I learn to simplify the memo-DP code with dictionary for memo and if .. not in memo to save some lines of code. Based on the techniques, I can solve a variety of hard problems today.
 
 Here are examples:
 
