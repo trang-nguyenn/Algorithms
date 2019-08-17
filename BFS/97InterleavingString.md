@@ -1,8 +1,8 @@
 [97 Interleaving String](https://leetcode.com/problems/interleaving-string/)
 
-Hard problem in LeetCode typically can be looped by either BFS/DFS or DP.
-We can use BFS/DFS to search if the solution exists.
-With DP we vectorize (vectorize here is pretty simple) and update the states when throwing in additional elements.
+Hard problem in LeetCode typically can be looped by either BFS/DFS or DP.   
+We can use BFS/DFS to search if the solution exists.   
+With DP we vectorize (vectorize here is pretty simple) and update the states when throwing in additional elements.   
 
 BFS/DFS use the operator to find the next valid elements, while DP use the operator to find the relationship of the previous to the new for the search (???)
 
