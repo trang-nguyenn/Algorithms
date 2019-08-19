@@ -6,7 +6,7 @@ Overall, the equivalent programing languages for the problems as follows:
 
 ```
 subset -- DP Subsequence Looping
-sum(set1) = sum(set2) -- knapsack with (0, +1, -1) to cal the update string and search for difference = 0
+sum(set1) = sum(set2) -- knapsack with (0, +1, -1) to cal the update "sum" and search for difference = 0
 max operator -- only store the elements in dp boxes as its largest amount
 ```
 
