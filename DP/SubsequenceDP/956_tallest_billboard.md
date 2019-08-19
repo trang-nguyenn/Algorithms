@@ -55,7 +55,8 @@ See following: https://leetcode.com/problems/tallest-billboard/discuss/203181/Ja
 
 Credited to: https://leetcode.com/problems/tallest-billboard/discuss/307626/Python-DP-Explanation-Easy-To-Understand
 
-How to think of the solution:
+How to think of the solution:   
+
 1). At first thought, I thought the solution could start with a backtracking solution. We have two buckets, we can either put each item in the 1st, 2nd, or neither bucket. Recursively, our base cases return the max weight if we have both buckets equal. Similar idea for this problem: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
 
 2). Then I remembered the Target Sum solution: https://leetcode.com/problems/target-sum/ We basically keep a dictionary of all the possible sums, and with each iteration, we either put the value in the 1st, 2nd, or neither bucket. This way, we can solve the problem in "linear" time.
