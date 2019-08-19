@@ -19,7 +19,7 @@ We need a clear strategy to write code for this priority queue.
 ```
 
 Rephase as:
-(1) We will stop the move when we hit destination: if the `max_distance>=target`
+(1) We will stop the move when we hit destination: if the `max_distance>=target`   
 (2) We should search for each stations consecutively, at each station we should store the amount of additional gas at that station. Also, we cannot go over the max_distance at that moment.  
 (3) At that time, we need the gas somewhere to extend the `max_distance`. Simply choose the gas station has the largest amount of gas.
 We use 2 while loops here, which is quite unusual.   
