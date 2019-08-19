@@ -2,7 +2,8 @@
 
 In this problem, the priority queue store the (grid[row][col], row, col). This queue is initialized with the boundary cells.
 
-Strategy:
+**Strategy:**
+
 (1) pop out the element of the priority queue with the lowest value of grid[row][col] (call this value `max_`. 
 
 (2) search the adjacent cells (in `moves` range). If the value of such grid[row][col] > `max_`, then (a) increment the `trapped water` by `max_ - val` and append this element to the priority queue with value `max_`. Else, (b) append this element with its original value
