@@ -6,6 +6,8 @@ Also, we often pad the first element of the string with 'NULL' for the initial s
 
 Well, the DP update rule of this exercise is well advanced compared to my programming logical level at the moment. Might be one day when I do more exercises with similar logic, I can figure out this logic faster.
 
+Code is credited to [DP](https://leetcode.com/problems/regular-expression-matching/discuss/5723/My-DP-approach-in-Python-with-comments-and-unittest)
+
 ```python
 class Solution(object):
     def isMatch(self, s, p):
