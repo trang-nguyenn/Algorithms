@@ -37,3 +37,37 @@ We don't have to remember all the value. What importance is the diff (pos - neg 
         return dp[0]
 
 ```
+
+
+## Useful Analysis
+
+Credited to: https://leetcode.com/problems/tallest-billboard/discuss/307626/Python-DP-Explanation-Easy-To-Understand
+
+How to think of the solution:
+1). At first thought, I thought the solution could start with a backtracking solution. We have two buckets, we can either put each item in the 1st, 2nd, or neither bucket. Recursively, our base cases return the max weight if we have both buckets equal. Similar idea for this problem: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+
+2). Then I remembered the Target Sum solution: https://leetcode.com/problems/target-sum/ We basically keep a dictionary of all the possible sums, and with each iteration, we either put the value in the 1st, 2nd, or neither bucket. This way, we can solve the problem in "linear" time.
+
+This is linear since we are told the sum of the rods will never be more than 5,000. So the solution is O(R\*N). R = number of rods. N = min(5,000, 3^n) We say min of 5,000 or 3^n because for each value in rod, we can either include it in the 1st, 2nd, or neither bucket. If we have more than 17 items, 5,000 will be our constant.
+
+For the 3 buckets, you can think of it as bucket #1 is where the weight is positive, bucket #2 is where the weight is negative, and bucket #3 is where the weight is 0.
+
+```python
+dp = collections.defaultdict(int)
+        dp[0] = 0
+        #For each value in rods, we consider adding, subtracting or not including the value 
+        #Key = how balanced (ie, -6 + 6), Value = total weight
+        #answer is dp[0] because 0 means we have equal number of + and - values
+        #For each value of a weight, the maximum weight you can have is the 
+        for r in rods: 
+            nextlevel = collections.defaultdict(int)
+            for cursum, totalweight in dp.items():
+                nextlevel[cursum + r] = max(nextlevel[cursum + r], totalweight + r)
+                nextlevel[cursum] = max(nextlevel[cursum], totalweight)
+                nextlevel[cursum - r] = max(nextlevel[cursum - r], totalweight + r)
+            dp = nextlevel
+        return dp[0]/2     
+```
+
+If we want to make this better, maybe we can search from both sides at the same time. Ie, what we do with 2-sided BFS. For more on this, check out Word Ladder -> https://leetcode.com/problems/word-ladder/
+
