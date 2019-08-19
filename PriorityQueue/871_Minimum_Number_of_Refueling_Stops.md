@@ -1,4 +1,4 @@
-[871. Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops/)
+# [871. Minimum Number of Refueling Stops](https://leetcode.com/problems/minimum-number-of-refueling-stops/)
 
 `Priority queue` to store the data and loop over the data structure.   
 Here `Priority queue` stores the gas of all the stations within reach. The optimum solution is the station with the highest amount of gas.
