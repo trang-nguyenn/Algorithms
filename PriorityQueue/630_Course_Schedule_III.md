@@ -1,4 +1,4 @@
-[630. Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)
+#[630. Course Schedule III](https://leetcode.com/problems/course-schedule-iii/)
 
 Similar to other priority queue problems, we need to know the optimum strategy of this problem before implementing the code.
 
