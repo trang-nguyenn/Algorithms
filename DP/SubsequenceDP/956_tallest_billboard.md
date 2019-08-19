@@ -24,7 +24,7 @@ With a new data y, We directly calculate the different possible value of 0 (do n
 `max operator` for dimensionality reduction:   
 Here is smart and tricky part of the dp
 We don't have to remember all the value. What importance is the diff (pos - neg or neg - pos) and the maximum value of pos.    
-[Python-DP](https://leetcode.com/problems/tallest-billboard/discuss/203181/JavaC%2B%2BPython-DP-min(O(SN2)-O(3N2-*-N))
+[Python-DP](https://leetcode.com/problems/tallest-billboard/discuss/203181/JavaC%2B%2BPython-DP-min(O(SN2)-O(3N2-*-N)/)
 
 
 ```python
