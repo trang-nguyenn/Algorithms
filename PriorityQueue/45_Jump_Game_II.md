@@ -40,7 +40,7 @@ There is a more optimal way to solve this problem based on [Jump Game I](https:/
 
 ```
 # Jump Game I
-```
+
 def canJump(nums):
   """
   :type nums: List[int]
@@ -57,8 +57,7 @@ def canJump(nums):
 def jump(nums):
         last, curr, count = 0, 0, 0
         for i, val in enumerate(nums):
-            if i < last: return -1
-            elif i> last:
+            if i> last:
                 last = curr
                 count += 1
             curr = max(curr, i+val)
