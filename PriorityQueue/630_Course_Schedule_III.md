@@ -4,18 +4,26 @@ Similar to other priority queue problems, we need to know the optimum strategy o
 
 The optimal strategy here is to choose all courses (#1)(sorted by their end time) provided that the time taken to finish such courses within end time (#2).
 Constraints: (1) total time cannnot exceed the end time (need while loop to search)   
-Optimal policy: always pop the courses with longest duration. $\Rightarrow$ use heap to store the duration
+Optimal policy: always pop the courses with longest duration. $\rightarrow\$ use heap to store the duration
 
 The priority queue will store the time to finish all courses that we are able to take. 
 
 
 ```python
-courses.sort(key = lambda x: x[1])
-total_time = 0
-pq = []
+def scheduleCourse(self, courses):
+        """
+        :type courses: List[List[int]]
+        :rtype: int
+        """
+        courses.sort(key = lambda x: x[1])
+        total_time = 0
+        pq = []
 
-for time, end in courses: #1
-    total_time += time
-    heapq.heappush(pq, -time)
-    while 
+        for time, end in courses: #1
+            total_time += time
+            heapq.heappush(pq, -time)
+            while total_time > end:
+                heapq.heappop()
+        return len(pq)
+```
 
