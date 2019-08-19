@@ -4,7 +4,7 @@ Typically, we have two 1D array/string/list, and we need to calculate some infor
 
 Also, we often pad the first element of the string with 'NULL' for the initial starting point.
 
-Well, the DP update rule is well advanced compared to my programming logical level at the moment. Might be one day when I do more exercises with similar logic, I can figure out this logic faster.
+Well, the DP update rule of this exercise is well advanced compared to my programming logical level at the moment. Might be one day when I do more exercises with similar logic, I can figure out this logic faster.
 
 ```python
 class Solution(object):
