@@ -2,7 +2,7 @@
 
 `Priority queue` to store the data and loop over the data structure.   
 We need a clear strategy to write code for this priority queue.   
-(1) We can only reach the max_distance as the amount of gas we have
+(1) We can only reach the max_distance as the amount of gas we have   
 (2) Within that distance, we need to choose the station with largest amount of gas to maximally improve the next max_distance.   
 However, even with all the new gas, we might not travel to the next next station or target, and need to return -1.   
 (3) If we ever hit the target, return the count.
