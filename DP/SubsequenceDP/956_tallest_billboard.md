@@ -14,8 +14,9 @@ max operator -- only store the elements in dp boxes as its largest amount
 
 properities of the problem: [knapsack](https://leetcode.com/problems/tallest-billboard/discuss/203261/Java-knapsack-O(N*sum)#_=_)   
 Given a list of numbers, multiply each number with `1 or 0 or -1`, make the sum of all numbers to 0. Find a combination which has the largest sum of all positive numbers.    
-e.g. Given [1,2,3,4,5,6], we have 1\*0 + 2 + 3 - 4 + 5 - 6 = 0, the sum of all positive numbers is 2 + 3 + 5 = 10. The answer is 10.   
-knapsack gives us a sense that we have a 2D table looping, one dimension is the 1D input data, and other dimension is the possible knapsack options (here is 0, -1, 1). We can loop horizonally first (all data first) or we can loop vertically (all knapsack option first, then gradually throw in data). In this example, we loop vertically.   
+*Given [1,2,3,4,5,6], we have 1\*0 + 2 + 3 - 4 + 5 - 6 = 0, the sum of all positive numbers is 2 + 3 + 5 = 10 --> answer is 10*   
+
+`Knapsack` gives us a sense that we have a 2D table looping, one dimension is the 1D input data, and other dimension is the possible knapsack options (here is 0, -1, 1). We can loop horizonally first (all data first) or we can loop vertically (all knapsack option first, then gradually throw in data). In this example, we loop vertically.   
 **(but why?)** (does it work if we choose to loop horizonally?)
 
 
