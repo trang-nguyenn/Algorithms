@@ -1,4 +1,4 @@
-[Predict the winner](https://leetcode.com/problems/predict-the-winner/)
+# [Predict the winner](https://leetcode.com/problems/predict-the-winner/)
 
 We only as two options: take the `start` or the `end` of the array.   
 Choose either of these actions, we can reduce the array calculation by one units --> Good sign for programmer (dimension reduction)
@@ -24,7 +24,10 @@ Now we add in memo skeleton:
             if (s,e) not in memo:
                 if XX:   memo[(s,e)] = XXX
                 elif YY: memo[(s,e)] = playgame(YYY)
-                else:    memo[(s,e)] = playgame(ZZZ) + ZZZ
+                else:   
+                        temp1 = playgame(ZZZ) + ZZZ
+                        temp2 = playgame(ZZ) + ZZ
+                        memo[(s,e)] = temp1...temp2 # Only assign the final value to memo, dont mess it up at the middle of the calculation
             return memo[(s,e)]
         ans = playgame(0, N)
 ```
