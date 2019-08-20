@@ -19,18 +19,18 @@ With no memory:
 
 Now we add in memo skeleton:
 ```python
-        memo = {}
-        def playgame(s,e):
-            if (s,e) not in memo:
-                if XX:   memo[(s,e)] = XXX
-                elif YY: memo[(s,e)] = playgame(YYY)
-                else:   
-                        temp1 = playgame(ZZZ) + ZZZ
-                        temp2 = playgame(ZZ) + ZZ
-                        memo[(s,e)] = temp1...temp2 # Only assign the final value to memo, dont mess it up at the middle of the calculation
-            # Divide all cases clearly, dont allow update memo twice
-            return memo[(s,e)]
-        ans = playgame(0, N)
+memo = {}
+def playgame(s,e):
+    if (s,e) not in memo:
+        if XX:   memo[(s,e)] = XXX
+        elif YY: memo[(s,e)] = playgame(YYY)
+        else:   
+                temp1 = playgame(ZZZ) + ZZZ
+                temp2 = playgame(ZZ) + ZZ
+                memo[(s,e)] = temp1...temp2 # Only assign the final value to memo, dont mess it up at the middle of the calculation
+    # Divide all cases clearly, dont allow update memo twice
+    return memo[(s,e)]
+ans = playgame(0, N)
 ```
 
 ## DP with memory:
