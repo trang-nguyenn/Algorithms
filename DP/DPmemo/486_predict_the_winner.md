@@ -28,6 +28,7 @@ Now we add in memo skeleton:
                         temp1 = playgame(ZZZ) + ZZZ
                         temp2 = playgame(ZZ) + ZZ
                         memo[(s,e)] = temp1...temp2 # Only assign the final value to memo, dont mess it up at the middle of the calculation
+            # Divide all cases clearly, dont allow update memo twice
             return memo[(s,e)]
         ans = playgame(0, N)
 ```
