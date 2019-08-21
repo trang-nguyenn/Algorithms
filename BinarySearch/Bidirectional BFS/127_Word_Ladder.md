@@ -5,8 +5,8 @@ Sometime, the next search can be very extensive: We cover a large range of cases
 
 **The lesson here is NOT afraid of writing 3 for loops to search for the next possible nodes of the graph.**
 
-Interesting and useful examples of bidirectional BFS to find the shortest connected graph.   
-Note that we must have visited for graph search, and in this algorithm, the visited is by directly substracting the remaining value of the dictionary of words.   
+Interesting and useful examples of **bidirectional BFS*** to find the shortest connected graph.   
+Note that we must have **visited** for graph search, and in this algorithm, the visited is by directly substracting the remaining value of the dictionary of words.   
 
 ```python
 class Solution(object):
