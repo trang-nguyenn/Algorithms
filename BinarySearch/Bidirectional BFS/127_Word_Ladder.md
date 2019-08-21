@@ -1,4 +1,4 @@
-#[127 Word Ladder](https://leetcode.com/problems/word-ladder/)
+# [127 Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 
 Sometime, the next search can be very extensive: We cover a large range of cases to find out what can be the next move.
