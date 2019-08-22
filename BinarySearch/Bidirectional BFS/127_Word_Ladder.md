@@ -52,7 +52,7 @@ This *bold* search reminds me on the other problems:
 # [126 Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 Slightly more complicated when we need to return the path.   
-The `for loop` I write for the front_path and return reminds me on how people write **GMAT sentences** and pack 4-5 layers of small sentences into a full sentence.
+The `for loop` I write for the front_path and return reminds me on how people write the **GMAT sentences** and pack 4-5 layers of small sentences into a full sentence.
 
 ```python
 class Solution(object):
