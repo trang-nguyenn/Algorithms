@@ -1,0 +1,21 @@
+# [1. Two Sum](https://leetcode.com/problems/two-sum/)
+
+This is the first problem that we are introduced to HashMap. In this problem, it requires only two numbers to sum to target; thus, the HashMap will store each of this number with this index and for every iteration, we will check whether a `new number - target` already exists in the HashMap. If yes, we return the index of both numbers.
+
+```
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        ref = {}
+        
+        for i, val in enumerate(nums):
+            if target- val in ref:
+                return [ref[target-val], i]
+            else:
+                ref[val] = i
+        return []
+```
