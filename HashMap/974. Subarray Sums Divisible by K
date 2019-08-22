@@ -1,0 +1,21 @@
+# [974. Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+The HashMap used in this problem is inspired by the way we used the hashmap of pre-sum in the previous problem. In this problem, instead of storing pre-sum, we will store pre-modulo of the sum.
+
+## Code
+
+```
+class Solution(object):
+    def subarraysDivByK(self, A, k):
+        """
+        :type A: List[int]
+        :type K: int
+        :rtype: int
+        """
+        ref = {0:1}
+        curr, ans = 0, 0
+        for num in A:
+            curr += num
+            ans += ref.get(curr%k, 0)
+            ref[curr%k] = ref.get(curr%k, 0) +1
+        return ans
+```
