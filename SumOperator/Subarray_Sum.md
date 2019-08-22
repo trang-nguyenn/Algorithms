@@ -52,7 +52,7 @@ class Solution(object):
 
 # [continuous-subarray-sum](https://leetcode.com/problems/continuous-subarray-sum/)
 
-**Faster than 20%**
+**Faster than 20%**   
 This is the DP technique I mentioned. Just when to add a new element to this dp can be quite confusing sometimes
 
 ```python
@@ -79,7 +79,7 @@ class Solution(object):
         return False
 ```
 
-**Faster than 95%**
+**Faster than 95%**   
 Back to the prefix approach
 
 ```python
