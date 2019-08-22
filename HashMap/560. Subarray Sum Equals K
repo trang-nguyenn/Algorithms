@@ -1,0 +1,25 @@
+# [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+The idea of using a hashmap for this problem is inspired from the classic [Two Sum] problem: we store all current sum to a dictionary and check if either this sum or this sum - target exists in the hashmap.
+
+```
+class Solution(object):
+    def subarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        ref = {}
+        ans, curr = 0, 0
+        for num in nums:
+            curr += num
+            # check
+            if curr == k: ans += 1
+            if curr-k in ref: ans += ref[curr-k]
+            
+            # update hashmap
+            ref[curr] = ref.get(curr,0) +1
+        
+        return ans
+```
