@@ -42,7 +42,7 @@ class Solution(object):
 Well, I like the code with `3 for loops`. Need to be Strong enough to do an extensive search at that moment.
 
 This *bold* search reminds me on the other problems:   
-(Concatenated Words)[https://github.com/trang-nguyenn/Algorithms/blob/master/DFS/472\.\%20Concatenated\%20Words.md]
+https://github.com/trang-nguyenn/Algorithms/blob/master/DFS/472.%20Concatenated%20Words.md
 
 
 
