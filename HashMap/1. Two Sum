@@ -19,3 +19,6 @@ class Solution(object):
                 ref[val] = i
         return []
 ```
+
+Easier Problem: return whether there is any pair of numbers in the `nums` list that sums to a target. There HashMap only need to store the number (key), but do not need to store its index
+More difficult problem: return how many sub-arrays that sum to a target ([560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/))
