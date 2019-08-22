@@ -41,12 +41,15 @@ class Solution(object):
 
 Well, I like the code with `3 for loops`. Need to be Strong enough to do an extensive search at that moment.
 
-This *bold* search reminds me on the other problems:   
-https://github.com/trang-nguyenn/Algorithms/blob/master/DFS/472.%20Concatenated%20Words.md
+This *bold* search reminds me on the other problems:
+[Concatenated Words](https://github.com/trang-nguyenn/Algorithms/blob/master/DFS/472.%20Concatenated%20Words.md)
 
 
 
-# (126 Word Ladder)[https://leetcode.com/problems/word-ladder/]
+
+
+
+# [126 Word Ladder](https://leetcode.com/problems/word-ladder/)
 
 Slightly more complicated when we need to return the path.   
 The `for loop` I write for the front_path and return reminds me on how people write **GMAT sentences** and pack 4-5 layers of small sentences into a full sentence.
