@@ -48,3 +48,55 @@ class Solution(object):
         return ans
 
 ```
+
+
+# [continuous-subarray-sum](https://leetcode.com/problems/continuous-subarray-sum/)
+
+**Faster than 20%**
+This is the DP technique I mentioned. Just when to add a new element to this dp can be quite confusing sometimes
+
+```python
+class Solution(object):
+    def checkSubarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        if not nums: return False
+        if k == 0: 
+            check = False
+            for i in range(len(nums)-1):
+                if nums[i] == nums[i+1] == 0: return True
+            return False
+        
+        dp = set([nums[0]%k]) #set of possible sums
+        for n in nums[1:]:
+            dp = {(n+Sum)%k for Sum in dp}
+            if 0 in dp:  return True
+            dp.add(n%k)
+            # print(n,dp)
+        return False
+```
+
+**Faster than 95%**
+Back to the prefix approach
+
+```python
+class Solution(object):
+    def checkSubarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: bool
+        """
+        data= {0:-1}
+        prefix = 0
+        for i,n in enumerate(nums):
+            prefix += n
+            m = prefix%k if k else prefix
+            print(n)
+            if m not in data: data[m] = i
+            elif data[m]+1<i: return True
+        return False
+```
