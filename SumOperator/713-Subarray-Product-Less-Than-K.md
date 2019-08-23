@@ -29,7 +29,7 @@ class Solution(object):
         return ans
 ```
 
-The dp.pop() implies that element is no longer needed for the evaluation, which suggests the `queue (left,right)` is sufficient for this task.
+The dp.pop() implies that element is no longer needed for subsequent evaluations, which suggests the `queue (left,right)` is sufficient for this task.
 
 Here is the code:   
 ```python
