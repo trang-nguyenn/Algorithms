@@ -70,3 +70,25 @@ Or a longer version ...
             ans += end-start
         return ans
 ```
+
+
+# [Maximum-Product-Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+
+Very interesting code on calculating the prefix and suffix. Standard code to do so.
+Even more interesting is the argument that the max product must include the begining or the end of the array.
+
+```python
+class Solution(object):
+    def maxProduct(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        nums1=nums[::-1]
+        for i in range(1,len(nums)):
+            nums[i]*=nums[i-1] or 1
+            nums1[i]*=nums1[i-1] or 1
+        print(nums)
+        print(nums1)
+        return max(nums+nums1)
+```
