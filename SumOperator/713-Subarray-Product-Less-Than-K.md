@@ -92,3 +92,29 @@ class Solution(object):
         print(nums1)
         return max(nums+nums1)
 ```
+
+# [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self/)
+
+Suppose you have numbers:   
+Numbers [1	2	3	4	5]   
+Pass 1: [-	1	12	123	1234]   
+Pass 2: [2345	345	45	5	-]   
+
+Finally, you multiply ith element of both the lists to get:
+Pass 3: [2345,	1345,	1245,	1235,	1234]
+
+```python
+class Solution(object):
+    def productExceptSelf(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        prefix, suffix = [1], [1]
+        nums1, nums2 = nums[:-1], nums[::-1][:-1]
+        for i in range(len(nums1)):
+            prefix += [prefix[-1]*nums1[i]]
+            suffix += [suffix[-1]*nums2[i]]
+        
+        return [p*s for p, s in zip(prefix, suffix[::-1])]
+```
