@@ -1,4 +1,4 @@
-[713-Subarray-Product-Less-Than-K](https://leetcode.com/problems/subarray-product-less-than-k/)
+# [713-Subarray-Product-Less-Than-K](https://leetcode.com/problems/subarray-product-less-than-k/)
 
 While it is clear that this product/sum of a contigious subarray should be loop by storing the continous product/sum, the additional variable for this looping can be `Counter`, or `Queue (left, right)`.
 
