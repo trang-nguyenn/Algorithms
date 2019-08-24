@@ -1,8 +1,8 @@
 # [689-maximum-sum-of-3-non-overlapping-subarrays](https://leetcode.com/problems/maximum-sum-of-3-non-overlapping-subarrays/)
 
-I think about `knapsack` on this problem, where I have 3 intervals of K. Each time, when we throw in new data, we need to divide into 2 cases:
-(1): the interval has the new element at the end. We need to calculate the optimum solution for nums[:i-k+1]
-(2): this element does not belong to the solution. Just skip this step and assign dp[i] = dp[i-1]
+I think about `knapsack` on this problem, where I have 3 intervals of K. Each time, when we throw in new data, we need to divide into 2 cases:   
+(1): the interval has the new element at the end. We need to calculate the optimum solution for nums[:i-k+1]   
+(2): this element does not belong to the solution. Just skip this step and assign dp[i] = dp[i-1]   
 
 
 `knapsack` gives us a sense that we have a 2D table looping, one dimension is the 1D input data, and other dimension is the possible knapsack options (here is -1, 1). We can loop horizonally first (all data first) or we can loop vertically (all knapsack option first, then gradually throw in data). In this example, we loop **horizontally**   
