@@ -1,7 +1,7 @@
 # [max-sum-of-rectangle-no-larger-than-k](https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/)
 
-The looping technique of this problem is the same as the sum operator for contigous subarray.
-**(I made a mistake on `left-1` in the indexing, where I use `left` and take a long time to debug)
+The looping technique of this problem is the same as the sum operator for contigous subarray.   
+**(I made a mistake on `left-1` in the indexing, where I use `left` and take a long time to debug)**
 
 ```python
 class Solution(object):
