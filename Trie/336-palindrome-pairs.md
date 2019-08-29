@@ -41,7 +41,9 @@ class Trie:
 
 ## Loop over Trie() and collect the information we want
 
-When we have only one word:
+When we have only one word:   
+We need to `search over this Trie() graph` and gradually pop out the word.    
+Indeed, to perform search over a graph is normally not easy.   
 
 ```python
 def getPalindromesForWord(trie, word, index):
