@@ -71,6 +71,17 @@ Ok, well, I made several mistakes:
 (1) A graph, where we can move from one node to other nodes with some keys. It must have a dictionary inside.    
      
 (2) Trie is the root of the graph, we no need to have any attribute to this root. This root only needs trie.child to point to the next Nodes of interest. We can store any attribute to the Node() by creating a new class... Some elevation of mindset here... I think about dp with various variables rather than a new class... Well, need to learn more on how ppl program Trie()...      
+
+```python
+class Node:
+    def __init__(self, isWord = False, string = None):
+        self.child = {}
+        self.isWord, self.string = isWord, string
+    
+class Trie:
+    def __init__(self):
+        self.child = {}
+```
    
 **The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.**       
    
@@ -79,3 +90,29 @@ Ok, well, I made several mistakes:
 `When a new word come in, should we create new Node() for the graph? Should we change the attribute of certain nodes? Generally, the looping over this graph to store new word is similar to DFS (Sound like a YES for me)?`   
    
 The addition of this new data can be creative... See palindrome pairs examples... See how we should balance out the programming on different paths to produce a good code.     
+
+```python
+    def addNode(self,word):
+        # How can we store the data of this word? Equals to 2 questions?
+        # Word len() == N must visited N nodes
+        # Where should we create a new node? - Fixed strategy of moving along word
+        # Word is a list of char, each char is the key of the edges in this graph
+        
+        # fixed flows:
+        node = self
+        for s in word:
+            if s not in node.child: node.child[s] = Trie()
+            node = node.child[s]
+            # Update atribute if needed
+        # Update attribut if needed
+
+        # Where should we update the attributes of a given node?
+```
+
+Again, all these codes is to support the main Trie() code:
+
+```python
+        data = Trie()
+        for word in words:
+            data.addNode(word)
+```
