@@ -72,7 +72,7 @@ Ok, well, I made several mistakes:
      
 (2) Trie is the root of the graph, we no need to have any attribute to this root. This root only needs trie.child to point to the next Nodes of interest. We can store any attribute to the Node() by creating a new class... Some elevation of mindset here... I think about dp with various variables rather than a new class... Well, need to learn more on how ppl program Trie()...      
    
-The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.       
+**The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.**       
    
 (3) We know that we have to build the function trie.addNode(word) to input a new word to this data structure.    
      
