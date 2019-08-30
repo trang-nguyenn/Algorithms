@@ -57,3 +57,17 @@ We know that when we learn the new value of the box, we move to the new Trie() n
                     if val in node:
                         dfs(S+[val], x,y, visited|{(x,y)}, node[val])
 ```
+
+Ok, well, I made several mistakes:    
+(1) I need to start the dfs with the value of the grid at that location, and the starting node is root.child\[val] rather than node. Well, need to think of a better Trie() node for cleaner looping...   
+(2) I made this mistake twice. Even if I see the Trie() that has a word, I should continue the loop. After the initialial `if`, I should  keep going with no `else`   
+(3) Please make myself clearer on the code for Trie() data.   
+
+### What is Trie()
+
+(1) A graph, where we can move from one node to other nodes with some keys. It must have a dictionary inside.       
+(2) Trie is the root of the graph, we no need to have any attribute to this root. This root only needs trie.child to point to the next Nodes of interest. We can store any attribute to the Node() by creating a new class... Some elevation of mindset here... I think about dp with various variables rather than a new class... Well, need to learn more on how ppl program Trie()...      
+   
+The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.       
+   
+(3) We know that we have to build the function trie.addNode(word) to input a new word to this data structure. The addition of this new data can be creative... See palindrome pairs examples... See how we should balance out the programming on different paths to produce a good code.     
