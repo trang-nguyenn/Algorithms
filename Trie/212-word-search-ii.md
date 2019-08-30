@@ -27,3 +27,33 @@ class Solution(object):
                 dfs(r,c)
         return ans
 ```
+
+Although we have not defined the Trie() and its attribute, we know we need to dfs with this skeleton:
+
+```python
+        def dfs(S,x,y, visited):
+            if ...
+            
+            next_search = [(x+dx,y+dy, grid[x+dx,y+dy]) for dx,dy in nxt
+                          if 0<=x+dx<nrow and 0<=y+dy<ncol 
+                           and (x+dx,y+dy) not in visited]
+            
+            for x, y, val in next_search:
+                if ...:
+                    dfs(S+[val], x,y, visited|{(x,y)})
+```
+
+We know that when we learn the new value of the box, we move to the new Trie() node, implying that this data is varying with our looping. So we need an additional variable inside the dfs. It also becomes clear on the termination condition and the Trie() class when we throw in this `node` variable.   
+
+```python
+        def dfs(S,x,y, visited, node):
+            if node.isWord:  ans.append(node.string)
+            else:
+                next_search = [(x+dx,y+dy, grid[x+dx,y+dy]) for dx,dy in nxt
+                              if 0<=x+dx<nrow and 0<=y+dy<ncol 
+                               and (x+dx,y+dy) not in visited]
+
+                for x, y, val in next_search:
+                    if val in node:
+                        dfs(S+[val], x,y, visited|{(x,y)}, node[val])
+```
