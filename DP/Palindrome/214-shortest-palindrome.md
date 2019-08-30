@@ -3,9 +3,9 @@
 
 So many interesting ideas from this question.
 
-## python: stringa.startwith(stringb)
+### python: stringa.startwith(stringb)
 
-(startwith)[https://leetcode.com/problems/shortest-palindrome/discuss/60099/AC-in-288-ms-simple-brute-force]
+[startwith](https://leetcode.com/problems/shortest-palindrome/discuss/60099/AC-in-288-ms-simple-brute-force)
 
 ```python
 def shortestPalindrome(self, s):
