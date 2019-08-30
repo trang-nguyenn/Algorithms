@@ -65,9 +65,13 @@ Ok, well, I made several mistakes:
 
 ### What is Trie()
 
-(1) A graph, where we can move from one node to other nodes with some keys. It must have a dictionary inside.       
+(1) A graph, where we can move from one node to other nodes with some keys. It must have a dictionary inside.    
+     
 (2) Trie is the root of the graph, we no need to have any attribute to this root. This root only needs trie.child to point to the next Nodes of interest. We can store any attribute to the Node() by creating a new class... Some elevation of mindset here... I think about dp with various variables rather than a new class... Well, need to learn more on how ppl program Trie()...      
    
 The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.       
    
-(3) We know that we have to build the function trie.addNode(word) to input a new word to this data structure. The addition of this new data can be creative... See palindrome pairs examples... See how we should balance out the programming on different paths to produce a good code.     
+(3) We know that we have to build the function trie.addNode(word) to input a new word to this data structure.    
+When a new word come in, should we create new Node() for the graph? Should we change the attribute of certain nodes? Generally, the looping over this graph to store new word is similar to DFS (Sound like a YES for me)?   
+   
+The addition of this new data can be creative... See palindrome pairs examples... See how we should balance out the programming on different paths to produce a good code.     
