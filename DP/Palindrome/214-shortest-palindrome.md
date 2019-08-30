@@ -1,4 +1,4 @@
-# (214-shortest-palindrome)[https://leetcode.com/problems/shortest-palindrome/]
+# [214-shortest-palindrome](https://leetcode.com/problems/shortest-palindrome/)
 
 
 So many interesting ideas from this question.
@@ -25,8 +25,10 @@ def shortestPalindrome(self, s):
 
 ## KMP algorithm
 
-(explaination)[https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation]   
-(youtube)[https://www.youtube.com/watch?v=GTJr8OvyEVQ]   
+[explaination](https://leetcode.com/problems/shortest-palindrome/discuss/60113/Clean-KMP-solution-with-super-detailed-explanation)   
+[youtube](https://www.youtube.com/watch?v=GTJr8OvyEVQ)   
+
+[Greeksforgreeks](https://www.geeksforgeeks.org/kmp-algorithm-for-pattern-searching/)   
 
 ```python
 def shortestPalindrome(self, s):
@@ -39,4 +41,16 @@ def shortestPalindrome(self, s):
         cont.append(index+(1 if A[index]==A[i] else 0))
     return s[cont[-1]:][::-1]+s
 
+```
+
+```python
+    def shortestPalindrome(self, g):
+        s = g + "|" + g[::-1]
+        lps = [-1] + [0] * len(s)
+        l, r = -1, 0
+        while r < len(s):
+            while l >= 0 and s[l] != s[r]: l = lps[l]
+            l, r = l + 1, r + 1
+            lps[r] = l
+        return g[lps[-1]:][::-1] + g
 ```
