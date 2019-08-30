@@ -43,7 +43,7 @@ Although we have not defined the Trie() and its attribute, we know we need to df
                     dfs(S+[val], x,y, visited|{(x,y)})
 ```
 
-We know that when we move to a new location of the box, we move to a new Trie() node, `implying that this data (location of the Trie() node) is varying with our looping`. So we need `an additional variable` inside the dfs loop. It also becomes clearer on the termination condition and how to construct the Trie() attributes when we throw in this `node` variable.   
+We know that when we move to a new location of the box, we move to a new Trie() node, `implying that this data (location of the Trie() node) is varying with our looping`. Since no other variable in the dfs loop can represent this location, we need `an additional variable` inside the dfs loop. It also becomes clearer on the termination condition and how to construct the Trie() attributes when we throw in this `node` variable.   
 
 ```python
         def dfs(S,x,y, visited, node):
