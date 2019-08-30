@@ -1,8 +1,9 @@
 # [79-word-search](https://leetcode.com/problems/word-search/)
 
-DFS over grid where the next_search differs for the first move and the second move onward.
-The looping technique is standard for normal dfs
-** The test case is crazy that where dfs over a fixed direction if prefered over random directions.
+DFS over grid where the next_search differs for the first move and the second move onward. Thus we divide 2 cases for `next_searches`   
+The looping technique is standard for normal dfs   
+
+** The test case is crazy that where dfs over a fixed direction if prefered over random directions.**   
 
 
 ```python
