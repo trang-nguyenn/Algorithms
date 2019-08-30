@@ -43,7 +43,7 @@ Although we have not defined the Trie() and its attribute, we know we need to df
                     dfs(S+[val], x,y, visited|{(x,y)})
 ```
 
-We know that when we move to a new location of the box, we move to a new Trie() node, **implying that this data (location of the Trie() node) is varying with our looping**. So we need **an additional variable** inside the dfs loop. It also becomes clearer on the termination condition and how to construct the Trie() attributes when we throw in this `node` variable.   
+We know that when we move to a new location of the box, we move to a new Trie() node, `implying that this data (location of the Trie() node) is varying with our looping`. So we need `an additional variable` inside the dfs loop. It also becomes clearer on the termination condition and how to construct the Trie() attributes when we throw in this `node` variable.   
 
 ```python
         def dfs(S,x,y, visited, node):
@@ -75,6 +75,7 @@ Ok, well, I made several mistakes:
 The data structure for Trie() - root and Node() - children complete here with the right dimensions of atributes. Next is to really store the data to this structure.       
    
 (3) We know that we have to build the function trie.addNode(word) to input a new word to this data structure.    
-**When a new word come in, should we create new Node() for the graph? Should we change the attribute of certain nodes? Generally, the looping over this graph to store new word is similar to DFS (Sound like a YES for me)?**   
+     
+`When a new word come in, should we create new Node() for the graph? Should we change the attribute of certain nodes? Generally, the looping over this graph to store new word is similar to DFS (Sound like a YES for me)?`   
    
 The addition of this new data can be creative... See palindrome pairs examples... See how we should balance out the programming on different paths to produce a good code.     
