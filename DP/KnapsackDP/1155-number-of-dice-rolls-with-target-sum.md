@@ -29,12 +29,4 @@
             # print(dp)
         return dp[-1]
         
-        for i in range(1,d):
-            temp = [None]*len()
-            for j in range(target-f-1, target):
-                sum_ = 0
-                for k in range(i+1, j):
-                    sum_ += dp[i-1][k]
-                temp[i][j] = sum_
-            dp = temp[:]
 ```
