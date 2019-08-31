@@ -1,4 +1,4 @@
-Pseuduocode for memo:
+Pseudo-code for memo:
 
 ```python
         memo, mod = {}, 10**9+7
