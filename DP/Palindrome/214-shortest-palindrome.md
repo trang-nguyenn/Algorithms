@@ -69,10 +69,10 @@ class Solution(object):
         pre, suf = 0,1
         while suf<len(text):
             if text[pre] == text[suf]:
-                lps[suf] = pre+1
+                lps[suf] = pre+1             # Extend the overlap range by 1
                 pre, suf = pre+1, suf+1
             else:
-                if pre!=0: pre = lps[pre-1]
+                if pre!=0: pre = lps[pre-1]  # Why this formula? The recursive here is crazy
                 else:
                     lps[suf] = 0
                     suf += 1
