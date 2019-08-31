@@ -38,11 +38,12 @@ This is a knapsack problem, with `options` are the values in each face of the di
 This code is elegant in the way the old DP is replaced. If it is not written in one-sentence style like in the above code, it would need a temporary variable to store the intermediate DP in memory. 
 
 ```python
+        
         mod = 10**9+7
         dp = [1 if 0<val<f+1 else 0 for val in range(target+1)]
         
         for i in range(2, d+1):
-            temp_dp = []
+            temp_dp = [] # temp variable to store temporary dp to avoid modifying in-place of the original dp
             for val in range(target+1):
                 temp_sum= 0
                 for idx in range(f):
