@@ -54,3 +54,27 @@ def shortestPalindrome(self, s):
             lps[r] = l
         return g[lps[-1]:][::-1] + g
 ```
+
+My Code:
+
+```python
+class Solution(object):
+    def shortestPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: str
+        """
+        text = s + '#' + s[::-1]
+        lps = [0]*len(text) #longest prefix suffix
+        pre, suf = 0,1
+        while suf<len(text):
+            if text[pre] == text[suf]:
+                lps[suf] = pre+1
+                pre, suf = pre+1, suf+1
+            else:
+                if pre!=0: pre = lps[pre-1]
+                else:
+                    lps[suf] = 0
+                    suf += 1
+        return s[lps[-1]:][::-1] + s
+```
