@@ -7,7 +7,7 @@ Build the palindrome substrings table
 ```python
         isPal = {}
         for r in range(len(s)):
-            for l in range(r+1,-1,-1):
-                if l>=r:    isPal[(l,r)] = True
-                else:       isPal[(l,r)] = (s[l] == s[r]) and isPal[(l+1,r-1)]
+            for l in range(r,-1,-1):
+                if l>r-2:   isPal[(l,r)] = True       #len()<2 is always palindrome
+                else:       isPal[(l,r)] = (s[l] == s[r]) and isPal[(l+1,r-1)] #start,end + recursive
 ```
