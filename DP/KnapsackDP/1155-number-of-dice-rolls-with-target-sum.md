@@ -1,6 +1,11 @@
 # [1155-number-of-dice-rolls-with-target-sum](https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/)
+Update Rule:
 
 `dp(d, N) = dp(d-1, N-f) + dp(d-1, N-f-1) + ... + dp(d-1, N-1)`
+
+This is a knapsack problem, with `options` are the values in each face of the dice.
+
+
 
 ## Memo
 
@@ -29,4 +34,21 @@
             # print(dp)
         return dp[-1]
         
+```
+This code is elegant in the way the old DP is replaced. If it is not written in one-sentence style like in the above code, it would need a temporary variable to store the intermediate DP in memory. 
+
+```python
+        mod = 10**9+7
+        dp = [1 if 0<val<f+1 else 0 for val in range(target+1)]
+        
+        for i in range(2, d+1):
+            temp_dp = []
+            for val in range(target+1):
+                temp_sum= 0
+                for idx in range(f):
+                    if val-f+idx >=0: temp_sum += dp[val-f+idx] 
+                temp_dp.append(temp_sum)
+            dp = temp_dp
+            
+        return dp[-1]% mod
 ```
