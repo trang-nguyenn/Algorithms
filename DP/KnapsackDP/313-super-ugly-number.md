@@ -2,7 +2,7 @@
 
 This is the very first knapsack problem we have gone through. 
 
-
+![Image](https://github.com/trang-nguyenn/Algorithms/blob/master/DP/KnapsackDP/images/313-superUgly.jpg)
 
 
 ## Code
