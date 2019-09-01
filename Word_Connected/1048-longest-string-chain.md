@@ -54,7 +54,7 @@ class Solution(object):
         dp = {}
         for word in sorted(words, key = len):
             dp[word] = max(dp.get(word[:i]+word[i+1:], 0) +1 for i in range(len(word)))
-        
+            # for everyword, find all of its its subsequence words in the dp dictionary (of shorter length and already updated with dp[prev]) and update dp[word]
         return max(dp.values())
 ```
 
