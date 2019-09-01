@@ -35,10 +35,9 @@ This is a knapsack problem, with `options` are the values in each face of the di
         return dp[-1]
         
 ```
-This code is elegant in the way the old DP is replaced. If it is not written in one-sentence style like in the above code, it would need a temporary variable to store the intermediate DP in memory. 
+This code is elegant in the way the old DP is replaced. If it is not written in using list comprehension, it would need a temporary variable to store the intermediate DP in memory. 
 
 ```python
-        
         mod = 10**9+7
         dp = [1 if 0<val<f+1 else 0 for val in range(target+1)]
         
