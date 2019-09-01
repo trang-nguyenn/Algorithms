@@ -10,8 +10,8 @@ for i in range(max(days)+1):
 * If we do not need to travel on day i: dp[i] = dp[i-1]
 * Else:
       temp = [None] * len(costs)
-      for i in range(len(costs)):
-            temp[i] = costs[i] + dp[max(0, i-duration[0])] # make sure we won't refer to a negative index of dp
+      for ii in range(len(costs)):
+            temp[ii] = costs[i] + dp[max(0, i-duration[ii])] # make sure we won't refer to a negative index of dp
       dp[i] = min(temp)
 ```
 
