@@ -3,7 +3,7 @@ Update Rule:
 
 `dp(d, N) = dp(d-1, N-f) + dp(d-1, N-f-1) + ... + dp(d-1, N-1)`
 
-This is a knapsack problem, with `options` are the values in each face of the dice.
+This is a knapsack problem, with `options` are the values in each face of the dice. We need to find the number of combinations of options so that the sum equal to a `target`.
 
 
 
