@@ -25,7 +25,7 @@ class Trie:
         node.isWord, node.string = True, word
 ```
 
-** Search new data**
+**Search new data**   
 When seeing a new data, the way to search over the Trie() graph is also standard:
 ```python
         def search_root(word, root):
