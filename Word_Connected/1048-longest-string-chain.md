@@ -18,6 +18,7 @@ This implementation might not be the optimal solution, however, the method is cl
 
 ## Code
 
+### Step-by-step Implementation
 ```python
 class Solution(object):
     def longestStrChain(self, words):
@@ -40,3 +41,20 @@ class Solution(object):
             ans = max(ans, max_len(word, tree))
         return ans
 ```
+
+### More concise code based on the same idea:
+
+```python
+class Solution(object):
+    def longestStrChain(self, words):
+        """
+        :type words: List[str]
+        :rtype: int
+        """
+        dp = {}
+        for word in sorted(words, key = len):
+            dp[word] = max(dp.get(word[:i]+word[i+1:], 0) +1 for i in range(len(word)))
+        
+        return max(dp.values())
+```
+
