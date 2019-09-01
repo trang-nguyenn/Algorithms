@@ -26,6 +26,7 @@ class Trie:
 ```
 
 **Search new data**   
+After Trie() is build, we need to throw in new data to search on this Trie() graph. The searching is similar to `addNode()`.
 When seeing a new data, the way to search over the Trie() graph is also standard:
 ```python
         def search_root(word, root):
