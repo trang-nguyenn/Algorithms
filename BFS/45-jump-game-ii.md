@@ -2,7 +2,7 @@
 
 Not too hard, but the fact that we compress the queue with nodes to its `start` to `end` drastically save the computation time.   
    
-It is worth mentioning that I have tried multiple ways and I have searched over the solutions in the discussion, only this solution declares variables in the way that I feel smooth and clean.     
+It is worth mentioning that I have tried multiple ways and I have searched over many solutions in the discussion, only this solution declares variables in the way that I feel smooth and clean.     
    
 Others, including mine, always need some dummy cases for len(nums)<2 ....      
    
