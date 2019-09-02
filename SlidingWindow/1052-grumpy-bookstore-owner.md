@@ -51,9 +51,12 @@ class Solution(object):
         :type X: int
         :rtype: int
         """
-        Sum = sum([num if grumpy[i] ==0 else 0 for i, num in enumerate(customers)])
-        customers = [cusVal if grumpy[i] == 1 else 0 for i, cusVal in enumerate(customers)]
-        
+        Sum = 0
+        for i, num in enumerate(customers):
+            if grumpy[i] == 0:
+                Sum += num
+                customers[i] = 0
+                
         cumSum = [0]*(len(customers)+1)
         for i in range(len(customers)):
             cumSum[i+1] = cumSum[i] + customers[i]
@@ -64,5 +67,4 @@ class Solution(object):
             val = max(val, temp)
         
         return Sum + val
-   
 ```
