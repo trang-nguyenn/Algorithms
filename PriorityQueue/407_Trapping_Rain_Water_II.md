@@ -11,7 +11,7 @@ In this problem, the priority queue store the (grid[row][col], row, col). This q
 (3) Repeat this process until all elements are visited.
 
 
-```
+```python
 class Solution(object):
     def trapRainWater(self, grid):
         """
