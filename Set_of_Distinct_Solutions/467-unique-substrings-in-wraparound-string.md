@@ -1,6 +1,10 @@
 # [467-unique-substrings-in-wraparound-string](https://leetcode.com/problems/unique-substrings-in-wraparound-string/)
 
-The `right coordinates` for the `distinct` is (1) the `last element` of the substring as a key - well, many problems use the same key, and (2) all the `valid subsequences` corresponding to that key - here, the subsequences are `compact enough` that we can compress it to a single number: not its max, or its min, but its `length`. 
+The `right coordinates` for the `distinct` is:   
+     
+(1) the `last element` of the substring as a key - well, many problems use the same key, and      
+     
+(2) all the `valid subsequences` corresponding to that key - here, the subsequences are `compact enough` that we can compress it to a single number: not its max, or its min, but its `length`. 
 
 We need a helper variable that indicates the continous of an index to its previous index. Sound like the lower level of the KMP algorithms for me... [KMP Algorithm](https://github.com/trang-nguyenn/Algorithms/blob/master/DP/Palindrome/214-shortest-palindrome.md)
 
