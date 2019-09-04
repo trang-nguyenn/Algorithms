@@ -14,6 +14,20 @@ for right in range(len(data)):
 return right-left+1
 ```
 
+If we want to remember what is the correct window at all points, e.g, dp\[], then we need to change `if` to `while`:
+
+```python
+
+left = 0
+for right in range(len(data)):
+    WindowData.__add__(data[right])
+    while WindowData.__valid__() == False:  # change if to while
+        WindowData.__remove__(data[left])
+        left += 1
+    dp[right] = func(left,right)  # remember all the updates
+return max(dp)  # return what we need to return
+```
+
 # [1004](https://leetcode.com/problems/max-consecutive-ones-iii/)
 ```
 WindowData: count number of 0 inside the windown
