@@ -7,7 +7,7 @@ To check the maximum valid window:
 ```python
 left = 0
 for right in range(len(data)):
-    ...WindowData.__add__(data[right])
+    WindowData.__add__(data[right])
     if WindowData.__valid__() == False:
         WindowData.__remove__(data[left])
         left += 1
