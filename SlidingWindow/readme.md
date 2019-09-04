@@ -22,7 +22,7 @@ LoopingStructure.__remove__()  : -1 if data[left] == 0 else 0
 LoopingStructure.__valid__()   : count<=K 
 ```
 
-#424
+# 424
 
 ```
 LoopingStructure: Counter()
