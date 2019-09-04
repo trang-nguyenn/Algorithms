@@ -14,7 +14,7 @@ for right in range(len(data)):
 return right-left+1
 ```
 
-# 1004:
+# [1004](https://leetcode.com/problems/max-consecutive-ones-iii/)
 ```
 LoopingStructure: count number of 0 inside the windown
 LoopingStructure.__add__()     : +1 if data[right] == 0 else 0
@@ -22,7 +22,7 @@ LoopingStructure.__remove__()  : -1 if data[left] == 0 else 0
 LoopingStructure.__valid__()   : count<=K 
 ```
 
-# 424
+# [424](https://leetcode.com/problems/longest-repeating-character-replacement/submissions/)
 
 ```
 LoopingStructure: Counter()
