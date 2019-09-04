@@ -42,5 +42,5 @@ WindowData.__valid__()   : count<=K
 WindowData: Counter()
 WindowData.__add__()     : data[right] += 1
 WindowData.__remove__()  : data[left]  -= 1
-WindowData.__valid__()   : quite complex function here = right-left+1 - Counter().most_common(1)[0][1]
+WindowData.__valid__()   : quite complex function here = right-left+1 - max(Counter().values)
 ```
