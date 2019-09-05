@@ -1,5 +1,7 @@
 # [1177-can-make-palindrome-from-substring](https://leetcode.com/problems/can-make-palindrome-from-substring/)
 
+It is very interesting that within `a few lines of code`, we can build various data structure to loop over the input data.    
+    
 Prefix as a counter of series of string - a dictionary with 26 keys.    
 Awesome data structure as the XOR operation (^) and the binary shift (<<). Well, this transformation is too advanced for me...
 
