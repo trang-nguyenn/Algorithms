@@ -2,7 +2,6 @@
 
 This is a typical DFS problem. Combination Sum and its variations demonstrates how the concept and code can be flexibly used and mofified to solve different problems.
 
-
 ```python
 def dfs(var1, var2): # var1, var2 are variables to carry information needed to do the next dfs recursion
     if .... [some conditions]:
@@ -12,6 +11,8 @@ def dfs(var1, var2): # var1, var2 are variables to carry information needed to d
     for i, num in enumerate(next_moves):
         dfs(var1 + num, var2 + i) # modified var1,var2 for next search
 ```
+
+It is noticeable that while dfs is good for expressively return the actual combinations, it is not very efficient if we just need to count the number of combinations (see [Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/). For counting numbers of combinations, using DP is more efficient.
 
 ## Code
 ```python
