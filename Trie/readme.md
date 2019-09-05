@@ -37,3 +37,35 @@ When seeing a new data, the way to search over the Trie() graph is also standard
                 node = node.child[char]
             return word
 ```
+
+
+# Dictionary as Trie()
+
+After searching on this topic, all agree that build the Trie() graph with dictionary is much faster. We will talk about how to build above functionalities with simple dictionary.   
+
+**Node Attribute**   
+Simply adding a special key for the node. Let say `node\['string'] = word` serves 2 functions: check if there is a word at a given node, and return the value of the string.     
+     
+**AddNode()**     
+Follow the standard code:
+```python
+        data = {}
+        for w in words:
+        ############ AddNode() ##############
+            node = data  #start from the root
+            for c in w:
+                if c not in node: node[c] = {}
+                node = node[c]
+            node['string'] = w
+```
+
+**Search new data**     
+Obviously, we need some kind of recursive here to travel over this graph. To be specific, it can be called `dfs`. We need to start from the `root` of the `Trie()` and move along the node until we can no longer travel and collect all we want to collect.   
+
+```python
+def dfs(node,idx):
+    ...Termination Conditions...
+    for key in node:
+        dfs(node[key],new_idx)
+
+```
