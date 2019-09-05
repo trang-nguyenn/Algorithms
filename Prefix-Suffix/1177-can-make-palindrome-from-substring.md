@@ -7,10 +7,10 @@ Awesome data structure as the XOR operation (^) and the binary shift (<<). Well,
      
 Various of new operators here:     
 (1)  bin(num) = '0bxxxxxxx'      
-(2)  bin(num)\[2:].count('1')
-(3)  XOR: ^:  5^6 = 101^110 = 011 = 3    
-(4)  binary left shift 1<<N = 2\*\*N 
-(5)  x1 ^ 1<<(N) : XOR + binary left shift     
+(2)  bin(num)\[2:].count('1')      
+(3)  XOR: ^:  5^6 = 101^110 = 011 = 3      
+(4)  binary left shift 1<<N = 2\*\*N       
+(5)  x1 ^ 1<<(N) : XOR + binary left shift          
 
 ```python
 >>> bin(1011)
