@@ -61,11 +61,14 @@ Follow the standard code:
 
 **Search new data**     
 Obviously, we need some kind of recursive here to travel over this graph. To be specific, it can be called `dfs`. We need to start from the `root` of the `Trie()` and move along the node until we can no longer travel and collect all we want to collect.   
+     
+We definitely need to have the node inside the dfs function.   
 
 ```python
 def dfs(node,idx):
     ...Termination Conditions...
     for key in node:
         dfs(node[key],new_idx)
-
+        
+dfs(root,start_idx)
 ```
