@@ -1,5 +1,7 @@
 # [1178-number-of-valid-words-for-each-puzzle](https://leetcode.com/problems/number-of-valid-words-for-each-puzzle/)
 
+Well, time is saved by half when we vectorize a word with bit. I reall think about all the modulation used in electrical engineering to transmit a series of data. With 0 and 1 we can modulate almost everything we want to modulate.   
+
 Vectorization with `bitwise modulation`
 
 ```python
