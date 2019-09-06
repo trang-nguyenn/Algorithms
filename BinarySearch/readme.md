@@ -1,4 +1,48 @@
+# Seach the answer
+
+When the function is monotonic, we can use binary search to find the answer.   
+Plus or minus 1 is dependent on cases and is the difficult part of this search
+
+```python
+while left(+1)<right(-1):
+  center = (left+right)//2
+  if func(center)<val: left = center (+1)
+  else: right = center (-1)
+```
+
+
 # bisect toolbox
+
+A direct application of the binary search is bisect toolbox inside a list.
+
+```python
+left, right = 0, len(li)
+```
+
+The code for bisect.bisect_left(li, val)
+
+```python
+def bisect_left(li, val):
+    left, right = 0, len(li)
+    while left<right:
+      center = (left+right)//2
+      if li[center]>val:
+      else
+    return left,right?
+```
+
+The code for bisect.bisect_right(li, val)
+
+```python
+def bisect_left(li, val):
+    left, right = 0, len(li)
+    while left<right:
+      center = (left+right)//2
+      if li[center]>val:
+      else
+    return left,right?
+```
+
 Refer to the following link [Bisect](https://www.geeksforgeeks.org/bisect-algorithm-functions-in-python/)     
 Important functions:     
 (1) bisect.bisect_left(li, val)     
@@ -29,14 +73,7 @@ The list after inserting new element using insort_right() is :
 1 3 4 4 5 4 6 
 ```
 
-# Seach the answer
+# Problems that need Binary Search
 
-When the function is monotonic, we can use binary search to find the answer.   
-Plus or minus 1 is dependent on cases and is the difficult part of this search
 
-```python
-while left(+1)<right(-1):
-  center = (left+right)//2
-  if func(center)<val: left = center (+1)
-  else: right = center (-1)
-```
+
