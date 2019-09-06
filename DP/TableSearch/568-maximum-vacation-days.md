@@ -1,6 +1,11 @@
 # [568-maximum-vacation-days](https://leetcode.com/problems/maximum-vacation-days/)
 
-It is DP, but technically, we can think about it as BFS with `optimum` and `deterministic` path from the `depth` to the `depth+1`. I personally think that this DP is still pretty simple, as the "connection" only happens at the `previous stage` to its `contiguous next stages`.    
+It is DP, but technically, we can think about it as BFS with `optimum` and `deterministic` path from the `depth` to the `depth+1`.      
+     
+I personally think that this DP is still pretty simple, as the "connection" only happens at the `previous stage` to its `contiguous next stages`.    
+     
+I like the variable `-float('inf')` as it can filter out all the non-special cases.
+
 
 ```python
 class Solution(object):
