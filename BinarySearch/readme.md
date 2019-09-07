@@ -77,5 +77,5 @@ The list after inserting new element using insort_right() is :
 # Problems that need Binary Search
 
 The problems with `increasing` or `decreasing` properties are typically related to binary search.
-
+If we need to find the index with certain values in a monotonic array, then binary search is a good candidate.
 
