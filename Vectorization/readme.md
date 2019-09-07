@@ -2,8 +2,14 @@ In many problems, especially when we need to check if one data is a `valid permu
      
 I summary the basic techniques here for such `vectorization`.     
 
-### ''.join(sorted(word)) or ''.join(sorted(set(word))) or str(sorted(word))
+### Set of word
 
+```python
+''.join(sorted(word))
+''.join(sorted(set(word)))
+str(sorted(word))
+frozenset(word)
+```
 We sort the data, and after sorting, all should have the same form. Some says that this technique is slow...     
 One of the possible development is to use the `frozenset()` built-in python function.   
 At some points, I should check it out.     
@@ -18,11 +24,18 @@ alphabet = {chr(c) for c in range(ord('a'),ord('z')+1)}
 data = {c:0 for c in alphabet}
 data = {c:word.count(c) for c in alphabet}
 ```
+### Bit Modulation
 
 One of the interesting and natural development of this technique is the `bitwise modulation`. I learnt 2 examples of this technique today (2019-Sep-05).   
 The technique is particularly useful when we only care about 0 or 1 presentation of the char inside the word.    
 Useful python operation includes: `| for and`, `^ for XOR` `>> and << for bitwise shift` 
 
+```python
+int('11110001',2)
+1<<8 #(2**8)
+bin(10)[2:]
+```
+Example
 ```python
     def findNumOfValidWords(self, words, puzzles):
         count = collections.Counter()
