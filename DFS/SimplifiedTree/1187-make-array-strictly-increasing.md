@@ -1,4 +1,4 @@
-# [1187-make-array-strictly-increasing] (https://leetcode.com/problems/make-array-strictly-increasing/)
+# (1187-make-array-strictly-increasing) [https://leetcode.com/problems/make-array-strictly-increasing/]
 
 Several techniques are as follows:
 ## Naivee Search (TLE)
