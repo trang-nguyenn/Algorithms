@@ -1,4 +1,4 @@
-[10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+# [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
 
 Typically, we have two 1D array/string/list, and we need to calculate some information out of these two data. 2D DP table is generally a good choice, as we can typically reduce the dimensions of the 1D data.   
 
