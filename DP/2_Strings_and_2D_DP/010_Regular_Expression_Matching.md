@@ -1,5 +1,37 @@
 # [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
 
+Well, 2D table search where we need to find our way from the begining of the table to the other end (Sound familiar huh). The really difficult part of this problem is to correctly understand the meaning of a node in this 2D table:     
+(1) True if the text `from that loc outward` and the pattern `from that loc outward` matches. NOT the two symbols at the loc matches.   
+(2) The connection rules from one grid to the other, where the `*` rules makes it really hard (I remember the problem of * for the parenthesis then). Does look backward easier than look forward? (No, forward is easier in this problem).   
+
+```python
+class Solution(object):
+    def isMatch(self, S, P):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        queue = [(0,0)]
+        visited = set()
+        while queue:
+            i1, i2 = queue.pop()
+            visited.add((i1,i2))
+            if (i1,i2) == (len(S),len(P)): return True
+            
+            valid = i1<len(S) and i2<len(P) and P[i2] in {S[i1],'.'}
+            if valid and (i1+1,i2+1) not in visited:
+                queue.append((i1+1,i2+1))
+            
+            if i2+1<len(P) and P[i2+1] =='*':
+                if valid and (i1+1,i2) not in visited:
+                    queue.append((i1+1,i2))
+                if (i1,i2+2) not in visited:
+                    queue.append((i1,i2+2))
+        return False
+```
+
+
 Typically, we have two 1D array/string/list, and we need to calculate some information out of these two data. 2D DP table is generally a good choice, as we can typically reduce the dimensions of the 1D data.   
 
 Also, we often pad the first element of the string with 'NULL' for the initial starting point.
