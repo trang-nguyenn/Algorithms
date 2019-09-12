@@ -4,7 +4,9 @@ Same as any other 2 strings problem, the DP here is pretty easy in the sense tha
 + If we find the same character, we refer to the orthogonal index   
 + If we didnot find the same one, we refer to horizonal index (not vertical here)   
    
-   The difference is at the meaning of `DP`. Instead of `y/n` or count the previous element, we store the information of the first index that makes the DP valid. Well, sounds related, but I did not find this meaning in the first time I do it.
+   The difference is at the meaning of `DP`. Instead of `y/n` or `count the previous overlap`, we store the information of the first index that makes the DP valid. Well, sounds related, but I did not find this meaning in the first time I do it.
+      
+   I think the meaning of dp is still at the recursive relationship between elements. 
    
 ```python
 class Solution(object):
