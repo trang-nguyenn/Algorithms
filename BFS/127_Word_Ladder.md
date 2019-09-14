@@ -3,7 +3,7 @@
 First, we need to form the graph by checking if one word is "connected" to the other.
 Second, BFS to find the shortest path.
 
-I heard that we can double-sided BFS to boost the searching time?
+I heard that we can double-sided BFS to boost the searching time? **Bi-directional BFS**
 
 ```python
 class Solution(object):
@@ -30,6 +30,41 @@ class Solution(object):
                                 for char_idx in range(ord('a'),ord('z')+1)}
             if len(start)>len(end):
                 start, end = end, start
+        return 0
+```
+
+```python
+class Solution(object):
+    def ladderLength(self, beginWord, endWord, wordList):
+        if endWord not in wordList or not endWord or not beginWord or not wordList: return 0
+        graph = collections.defaultdict(list)
+        n = len(beginWord)
+        for word in wordList:
+            for i in range(n):
+                graph[word[:i] + '*' + word[i+1:]].append(word)
+        
+        #Bi-directional BFS
+        queue_begin, queue_end = [(beginWord,1)], [(endWord,1)]
+        visited_begin, visited_end = {beginWord:1}, {endWord:1}
+        
+        def bbfs(q, visited1, visited2): # visited from two side of search
+            curr, level = q.pop(0)
+            for i in range(n):
+                immediate = curr[:i] + '*' + curr[i+1:]
+                for word in graph[immediate]:
+                    if word in visited2:
+                        return level + visited2[word]
+                    if word not in visited1:
+                        visited1[word] = level + 1
+                        q.append((word, level +1))
+            return None
+
+        while queue_begin and queue_end:
+            ans = bbfs(queue_begin, visited_begin, visited_end)
+            if ans: return ans
+            ans = bbfs(queue_end, visited_end, visited_begin)
+            if ans: return ans
+        
         return 0
 ```
 
