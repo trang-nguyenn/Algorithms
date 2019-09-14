@@ -33,6 +33,9 @@ class Solution(object):
         return 0
 ```
 
+In this solution, the graph is more extensive: it contains words in the list with exactly 1 character as wildcard. 
+For example, in this graph: `graph[h*t] = [hot, hit]`.    
+
 ```python
 class Solution(object):
     def ladderLength(self, beginWord, endWord, wordList):
