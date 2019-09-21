@@ -1,6 +1,6 @@
 # [1197-minimum-knight-moves](https://leetcode.com/problems/minimum-knight-moves/)
 
-The classic way to solve this problem is BFS, however, there are math solutions which is not very obvious.
+The classic way to solve this problem is BFS, however, there are math solutions which may not be very obvious.
 
 The implementation of BFS in this problem is the standard BFS implementation, however, for multiple test cases, it is more efficient if we save the previous search in memory. 
 
