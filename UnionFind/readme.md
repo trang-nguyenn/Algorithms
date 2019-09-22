@@ -1,4 +1,23 @@
 ```python
+parent = [i for i in range(N)]
+        
+        def find(i):
+            memo = set([i])
+            while parent[i] != i:
+                i = parent[i]; memo.add(i)
+            for node in memo: parent[node] = i
+            return i
+        
+        def union(i1,i2):
+            parent[find(i1)] = find(i2)
+        
+        for i1,i2 in pairs:
+            union(i1,i2)
+
+```
+
+
+```python
 class UnionFind:
     def __init__(self):
         self.A={}
