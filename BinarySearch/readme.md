@@ -1,3 +1,7 @@
+# Official bisect documents
+
+https://github.com/python/cpython/blob/master/Lib/bisect.py#L15
+
 # Seach the answer
 
 When the function is monotonic, we can use binary search to find the answer.   
