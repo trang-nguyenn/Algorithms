@@ -1,11 +1,11 @@
-#[282-expression-add-operators](https://leetcode.com/problems/expression-add-operators/)
+# [282-expression-add-operators](https://leetcode.com/problems/expression-add-operators/)
 
 First, I think about dp as dictionary to search over the problem. But the `*` operator and concatinating number make the new elements having several layers of connections to the previous.     
 `dfs` is a good choice here. Although my code works, it takes 1600ms to complete. While with simple modifications, the running time reduces to 200ms. I still not quite sure which path cause the significant runing time.
 
 ### My codes
 ```python
-def next_search(string, li, idx, nxt):
+        def next_search(string, li, idx, nxt):
             idx = idx + len(nxt)
             if li:
                 yield string+'+'+ nxt, li + [int(nxt)], idx
