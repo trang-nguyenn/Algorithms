@@ -1,0 +1,1 @@
+For the problems that when read them, we understand that we need to search over the list with all the possible combinations, kinds of combinations as options for knapsack, and we need to dfs to search over all combinations.
