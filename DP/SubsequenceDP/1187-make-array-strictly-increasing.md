@@ -1,6 +1,6 @@
 # [1187-make-array-strictly-increasing](https://leetcode.com/problems/make-array-strictly-increasing/)
 
-NP Hard as at every new node, we have 2 options: keep going with the current array or choose the new element from the arr2. If we go with this direction (by dfs, backtracking, bfs), time complexity is (2^N).   
+First thought: NP Hard as at every new node, we have 2 options: keep going with the current array or choose the new element from the arr2. If we go with this direction (by dfs, backtracking, bfs), time complexity is (2^N).   
 
 To loop over this data structure, we only care about: The 2D dimensions of this data is `count` the number of time we need to change and `val` the last (and obviously largest) value of the modified array.    
      
