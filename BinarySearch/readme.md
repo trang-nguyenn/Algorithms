@@ -2,18 +2,33 @@
 
 https://github.com/python/cpython/blob/master/Lib/bisect.py#L15
 
+
+
 # Seach the answer
 
 When the function is monotonic, we can use binary search to find the answer.   
 Plus or minus 1 is dependent on cases and is the difficult part of this search
 
 ```python
-while left(+1)<right(-1):
-    center = (left+right)//2
-    if func(center)<val: left = center (+1)
-    else: right = center (-1)
-return left?right?
+# When mid does NOT have +1 then low side needs +1 to balance out the options
+lo,hi = 0,N
+while lo<hi:
+    mid = (lo+hi)//2
+    if isBalance(mid): hi = mid
+    else:              lo = mid+1
+return lo
 ```
+
+```python
+# When mid does have +1 then high side needs -1 to balance out the options
+lo,hi = 0,N
+while lo<hi:
+    mid = (lo+hi+1)//2
+    if isBalance(mid): lo = mid
+    else:              hi = mid-1
+return lo
+```
+
 
 
 # bisect toolbox
