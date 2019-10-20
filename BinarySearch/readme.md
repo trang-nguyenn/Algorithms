@@ -11,6 +11,7 @@ Plus or minus 1 is dependent on cases and is the difficult part of this search
 
 ```python
 # When mid does NOT have +1 then low side needs +1 to balance out the options
+# BISECT_LEFT
 lo,hi = 0,N
 while lo<hi:
     mid = (lo+hi)//2
@@ -21,6 +22,7 @@ return lo
 
 ```python
 # When mid does have +1 then high side needs -1 to balance out the options
+# BISECT_RIGHT
 lo,hi = 0,N
 while lo<hi:
     mid = (lo+hi+1)//2
