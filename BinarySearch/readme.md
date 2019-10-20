@@ -1,3 +1,5 @@
+![image1](https://github.com/trang-nguyenn/Algorithms/blob/master/BinarySearch/BinarySearch.png)
+
 # Official bisect documents
 
 https://github.com/python/cpython/blob/master/Lib/bisect.py#L15
