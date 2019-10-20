@@ -1,3 +1,5 @@
+![Image](https://github.com/trang-nguyenn/Algorithms/blob/master/SlidingWindow/SlidingWindow.png)
+
 # Skeleton
 
 Data is the input data structure.    
