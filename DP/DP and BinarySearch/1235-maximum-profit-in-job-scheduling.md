@@ -2,7 +2,7 @@
 
 `NP-Hard`: DFS from the first job, and keep searching the `valid jobs` after it until we have no more jobs.     
 
-`DP`: Loop over the ending time (well, ending time determine everything).   
+`DP`: Loop over the ending time (well, ending time determine everything, this is also the DFS dimension as well).   
 The `max` operator `compress` the data at a given node to its max value (reduce from tree to line)     
 The node is `connected` to the previous node next to the `end` value and the node next to the `start` value.
 
