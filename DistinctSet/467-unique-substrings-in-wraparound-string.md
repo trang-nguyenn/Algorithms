@@ -24,3 +24,19 @@ class Solution(object):
             data[char] = max(data.get(char,1),current)
         return sum([n for n in data.values()])
 ```
+
+
+A shorted version
+```python
+class Solution(object):
+    def findSubstringInWraproundString(self, p):
+        """
+        :type p: str
+        :rtype: int
+        """
+        dp = collections.defaultdict(int)
+        for i, c in enumerate(p):
+            count = count + 1 if i>0 and (ord(c)-ord(p[i-1]))%26 == 1 else 1
+            dp[c] = max(dp[c],count)
+        return sum(dp.values())
+```
