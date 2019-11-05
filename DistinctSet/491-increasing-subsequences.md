@@ -16,3 +16,18 @@ class Solution(object):
             dp |= {sub + (num,) for sub in dp if not sub or sub[-1] <= num}
         return [sub for sub in dp if len(sub) >= 2]
 ```
+
+A shorted version
+```python
+class Solution(object):
+    def findSubstringInWraproundString(self, p):
+        """
+        :type p: str
+        :rtype: int
+        """
+        dp = collections.defaultdict(int)
+        for i, c in enumerate(p):
+            count = count + 1 if i>0 and (ord(c)-ord(p[i-1]))%26 == 1 else 1
+            dp[c] = max(dp[c],count)
+        return sum(dp.values())
+```
