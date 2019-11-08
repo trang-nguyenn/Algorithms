@@ -43,7 +43,6 @@ class Graph:
     def addEdge(self,u,v): 
         self.graph[u].append(v) 
   
-
     def dfs(self,v,visited,stack): 
         visited[v] = True
         for i in self.graph[v]: 
@@ -55,8 +54,7 @@ class Graph:
         visited = [False]*self.V 
         stack =[] 
         for i in range(self.V): 
-            if visited[i] == False: 
-                self.dfs(i,visited,stack) 
+            if visited[i] == False:  self.dfs(i,visited,stack) 
         return stack
 ```
 
