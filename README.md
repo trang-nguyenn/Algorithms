@@ -4,5 +4,6 @@ This repository contains solutions and discussions related to some of the intere
 
 The problems are divided by categories of methods. We hope to use this materials for passing knowledge and sharing our coding journey.
 
-We should review Trie() - Word Ladder- and UnionFind() 
-Topological Sort with Course Schedule
+We should review Trie() - Word Search II -    
+and UnionFind() 
+Topological Sort with Course Schedule II
