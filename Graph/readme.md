@@ -8,7 +8,7 @@ Sometimes we see `queue` and `stack` to loop over this graph, and we stop the lo
 
 ## Queue (or you might think about its duality BFS) and the detecting loop problem
 
-Something extra here is the update rule of the `number_out`. We need to do an extra step of deleting the "visited" connection over our looping. 
+Something extra here is the update rule of the `number_out`. We need to do an extra step of deleting the "visited" connection over our looping before we can add the neighbor to the queue. Check out the code below. 
 
 ```python
         queue = [i for i in num_out if num_out[i]==0]
@@ -27,6 +27,38 @@ The "depth" here is the number of "directed outflows". We need a trick to reveal
 When we do sorting, we need a "value", such as 2<3, but what can be the "value" here in graph?     
 There is always extra flavors in the graph structure, something similar but not quite.    
 We are talking about the order of flows. Prev must come before node, and node must come before its nexts.
+
+`"white-gray-black" DFS` should be in the textbook for all the teaching of dfs. 
+
+[source](https://www.geeksforgeeks.org/python-program-for-topological-sorting/)
+
+```python 
+from collections import defaultdict 
+
+class Graph: 
+    def __init__(self,vertices): 
+        self.graph = defaultdict(list) #dictionary containing adjacency List 
+        self.V = vertices #No. of vertices 
+  
+    def addEdge(self,u,v): 
+        self.graph[u].append(v) 
+  
+
+    def dfs(self,v,visited,stack): 
+        visited[v] = True
+        for i in self.graph[v]: 
+            if visited[i] == False: 
+                self.dfs(i,visited,stack) 
+        stack.insert(0,v) 
+  
+    def topologicalSort(self): 
+        visited = [False]*self.V 
+        stack =[] 
+        for i in range(self.V): 
+            if visited[i] == False: 
+                self.dfs(i,visited,stack) 
+        return stack
+```
 
 
 ## Critical Connections (stack or queue? search deep or search nearby first?) 
