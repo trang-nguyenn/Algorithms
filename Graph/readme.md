@@ -32,6 +32,8 @@ We are talking about the order of flows. Prev must come before node, and node mu
 
 [source](https://www.geeksforgeeks.org/python-program-for-topological-sorting/)
 
+The things in extra is the "marked" color of the node, which is equivalent to signal that the node is "out of the graph consideration". When we search for this neibourgh, we can assume that its job has been done.
+
 ```python 
 from collections import defaultdict 
 
