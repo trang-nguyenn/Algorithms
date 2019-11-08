@@ -25,7 +25,7 @@ class Solution(object):
         color = collections.defaultdict(int)
 
         def dfs(node):
-            if color[node] != white:
+            if color[node] != WHITE:
                 return color[node] == BLACK
 
             color[node] = GRAY
