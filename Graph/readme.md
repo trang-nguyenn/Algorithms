@@ -59,5 +59,22 @@ class Graph:
         return stack
 ```
 
+```python
+        WHITE,BLACK = 0, 1
+        color = collections.defaultdict(int)
+        stack = []
+        def dfs(node):
+            if color[node] == WHITE:
+                for nei in outcoming[node]:
+                    if color[nei] != BLACK:
+                        dfs(nei)
+                color[node] = BLACK
+                stack.append(node)
+        
+        for node in range(numCourses):
+            dfs(node)
+        return stack
+```
+
 
 ## Critical Connections (stack or queue? search deep or search nearby first?) 
