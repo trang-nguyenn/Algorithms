@@ -54,7 +54,8 @@ class Graph:
         visited = [False]*self.V 
         stack =[] 
         for i in range(self.V): 
-            if visited[i] == False:  self.dfs(i,visited,stack) 
+            if visited[i] == False:  
+                self.dfs(i,visited,stack) 
         return stack
 ```
 
