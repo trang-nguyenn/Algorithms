@@ -7,7 +7,7 @@ There are a few solutions to this problem.
 4. Counter solution
 
 ### Stack
-Intuition: the stack store the indices of invalid parentheses. The space between those invalid parentheses are the length of valid substrings of parentheses
+**Intuition**: the stack store the indices of invalid parentheses. The space between those invalid parentheses are the length of valid substrings of parentheses
 
 ```python
 class Solution(object):
@@ -31,10 +31,11 @@ class Solution(object):
 ```
 
 ### Counter
-Intuition: 
+**Intuition**: 
 The string is valid only when (1) count of close/open parentheses are equal and (2) number of open parentheses are >= close parentheses at all times.
 
 The count of open/close parentheses are half of the length of potential longest valid open/close parentheses pairs.
+
 Thus:
 - when count of open parenthesis = count of close parentheses, we update the longest valid string.
 - when count of close parentheses > count of open parentheses, the substring is invalid, we update reset the count of open/close parentheses immediately.
