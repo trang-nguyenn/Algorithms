@@ -2,7 +2,7 @@
 
 There are a few solutions to this problem. 
 1. The brute-force solution check if the substrings are valid and store the longest valid substring. This solution does not pass the test cases.
-2. The second solution uses DP. More information about this solution can be found [here](https://leetcode.com/articles/longest-valid-parentheses/). However, the update rule is not easy.
+2. The second solution uses DP. More information about this solution can be found [here](https://leetcode.com/articles/longest-valid-parentheses/). However, the update rule is not easy to spot.
 3. Stack solution 
 4. Counter solution
 
