@@ -12,7 +12,7 @@ A = ['h', 'e', 'l', 'l', 'o']
 ''.join(A)
 
 # Reverse string
-s = s[::-1]
+s = s[::-1] or reversed(s)
 
 ```
 
