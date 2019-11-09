@@ -9,3 +9,5 @@ and UnionFind()    https://github.com/trang-nguyenn/Algorithms/blob/master/Union
 Topological Sort with Course Schedule II  
 https://leetcode.com/problems/alien-dictionary/     
 Binary Search for Sorted Structures   
+
+Stack if indexes to loop over the data: https://leetcode.com/problems/largest-rectangle-in-histogram/
