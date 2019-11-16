@@ -14,6 +14,7 @@ Main function:
 + union 2 nodes: need to travel all the way to their roots to make the connection
 + print out all the elements in the trees
 
+We need to travel up and down in the "union tree" to find and get what we want.   
 
 ```python
 parent = [i for i in range(N)]
