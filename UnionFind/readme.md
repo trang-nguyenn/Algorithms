@@ -39,3 +39,34 @@ class UnionFind:
         b=self.find(b)
         self.A[b] = self.A[a]
 ```
+
+Union-Find with graph approach:
+Intuition: Iterate through each element of the graph to find the group of connected slements (union)
+
+
+```python
+def UnionFind(graph)
+'''
+input: a graph of type dictionary
+output: a dictionary of key:val = node: itsGroup
+'''
+
+
+    visited = set()
+    union = {}
+    for e in graph:
+        if e not in visited:
+            # find group
+            group = set()
+            stack = [e]
+
+            while stack:
+                node = stack.pop()
+                visited.add(node)    
+                group.add(node)
+                stack += [new for new in graph[node] if new not in visited]
+            for node in group:
+                union[node] = union
+    return union     
+            
+```
