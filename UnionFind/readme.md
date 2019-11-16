@@ -1,3 +1,7 @@
+Very easy code to remember:
+https://leetcode.com/problems/redundant-connection/discuss/108002/Unicode-Find-(5-short-lines)
+
+
 ```python
 parent = [i for i in range(N)]
         
