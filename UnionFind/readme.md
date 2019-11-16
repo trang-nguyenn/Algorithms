@@ -12,7 +12,7 @@ At the end of this union-find, we want to know the parents of all nodes.
 Main function:
 + find_root: like recursive
 + union 2 nodes: need to travel all the way to their roots to make the connection
-+ print out all the elements in the trees
++ print out all the union group in the trees
 
 We need to travel up and down in the "union tree" to find and get what we want.   
 
