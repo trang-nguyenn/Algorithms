@@ -78,6 +78,24 @@ class Graph:
             dfs(node)
         return stack
 ```
-
+```python
+        white, gray, black = 0,1,2
+        color = collections.defaultdict(int)
+        stack = []
+        def dfs(node):
+            if color[node] != white:
+                return color[node] == black
+            
+            color[node] = gray
+            for nei in outgoing[node]:
+                if color[nei]== gray or dfs(nei) == False:
+                    return False
+            color[node] = black
+            stack.append(node)
+            return True
+        
+        for node in vertices:
+            if dfs(node) == False: return ""
+```
 
 ## Critical Connections (stack or queue? search deep or search nearby first?) 
