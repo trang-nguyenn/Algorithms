@@ -11,6 +11,8 @@ Need a center data structure to store the parent of a given node.
 At the end of this union-find, we want to know the parents of all nodes.    
 Main function:
 + find_root: like recursive
++ union 2 nodes: need to travel all the way to their roots to make the connection
++ print out all the elements in the trees
 
 
 ```python
