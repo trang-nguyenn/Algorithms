@@ -99,3 +99,33 @@ class Graph:
 ```
 
 ## Critical Connections (stack or queue? search deep or search nearby first?) 
+
+https://leetcode.com/problems/critical-connections-in-a-network/
+
+```python
+class Solution(object):
+    def criticalConnections(self, n, connections):
+        """
+        :type n: int
+        :type connections: List[List[int]]
+        :rtype: List[List[int]]
+        """
+        graph = {}
+        for n1, n2 in connections:
+            graph.setdefault(n1,set()).add(n2)
+            graph.setdefault(n2,set()).add(n1)    
+            
+        number, score = [None]*n, [None]*n
+        self.count = 0
+        
+        def dfs(node, root):
+            number[node],score[node] = self.count, self.count
+            self.count += 1
+            
+            for nxt in graph[node]:
+                if number[nxt] == None:  dfs(nxt, node)
+            score[node] = min(score[nxt] for nxt in graph[node]|set([node]) if nxt!=root)
+           
+        dfs(0, None)
+        return [[n1, n2] for n1, n2 in connections if score[n1]>number[n2] or score[n2]>number[n1]]
+```
