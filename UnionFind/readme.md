@@ -1,15 +1,26 @@
 Very easy code to remember:
 https://leetcode.com/problems/redundant-connection/discuss/108002/Unicode-Find-(5-short-lines)
 
+Union-Find is like traversal over a tree.     
+
+Need a center data structure to store the parent of a given node.
+(updating this is our main purpose of runing the union-find code)
++ Normal: a dictionary: parent = {node:node for node in all_nodes}
++ Slightly more advanced: a list: index-node, list\[index\] = parent: `li = [i for i in range(all_nodes)]`
+
+At the end of this union-find, we want to know the parents of all nodes.    
+Main function:
++ find_root: like recursive
+
 
 ```python
 parent = [i for i in range(N)]
         
         def find(i):
-            memo = set([i])
+            path = set([i])
             while parent[i] != i:
-                i = parent[i]; memo.add(i)
-            for node in memo: parent[node] = i
+                i = parent[i]; path.add(i)
+            for node in path: parent[node] = i
             return i
         
         def union(i1,i2):
