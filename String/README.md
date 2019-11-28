@@ -30,4 +30,11 @@ print str1.find(str2, 40)
 15
 15
 -1
+
+a = 'train_98_test_20'
+a[a.find('test_') + len('test_'):]
+# 20
+
+# Quite a clean code to extract the information from a title in python 
+celebrity_names=[name[:name.find('0')-1].replace("_", " ") for name in celebrity_photos]
 ```
