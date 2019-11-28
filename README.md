@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/199603552.svg)](https://zenodo.org/badge/latestdoi/199603552)
+
 # Algorithms
 
 This repository contains solutions and discussions related to some of the interesting problems we have solved on LeetCode. 
