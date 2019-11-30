@@ -1,7 +1,7 @@
 # Priority Queue
 
 Center around the concept of heap, where we always need to keep track of the smallest or largest element of a queue.     
-Very famous application includes the Uniform Cost Search.     
+Very famous applications include the Uniform Cost Search and Heuristic Search (A-star).     
 
 ## Python Modules
 
