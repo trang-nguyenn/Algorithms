@@ -4,6 +4,27 @@
 
 https://github.com/python/cpython/blob/master/Lib/bisect.py#L15
 
+## Bisect_left
+
+```python
+def bisect_right(a, x, lo=0, hi=None):
+    while lo < hi:
+        mid = (lo+hi)//2
+        if a[mid] < x: lo = mid+1
+        else: hi = mid
+    return lo
+```
+
+## Bisect_right
+
+```python
+def bisect_right(a, x, lo=0, hi=None):
+    while lo < hi:
+        mid = (lo+hi)//2
+        if x < a[mid]: hi = mid
+        else: lo = mid+1
+    return lo
+```
 
 
 # Seach the answer
@@ -29,40 +50,6 @@ while lo<hi:
     if isBalance(mid): lo = mid
     else:              hi = mid-1
 return lo
-```
-
-
-
-# bisect toolbox
-
-A direct application of the binary search is bisect toolbox inside a list.
-
-```python
-left, right = 0, len(li)
-```
-
-The code for bisect.bisect_left(li, val)
-
-```python
-def bisect_left(li, val):
-    left, right = 0, len(li)
-    while left<right:
-      center = (left+right)//2
-      if li[center]>val:
-      else
-    return left,right?
-```
-
-The code for bisect.bisect_right(li, val)
-
-```python
-def bisect_left(li, val):
-    left, right = 0, len(li)
-    while left<right:
-      center = (left+right)//2
-      if li[center]>val:
-      else
-    return left,right?
 ```
 
 Refer to the following link [Bisect](https://www.geeksforgeeks.org/bisect-algorithm-functions-in-python/)     
@@ -100,3 +87,6 @@ The list after inserting new element using insort_right() is :
 The problems with `increasing` or `decreasing` properties are typically related to binary search.
 If we need to find the index with certain values in a monotonic array, then binary search is a good candidate.
 
+# Bisect over 2D
+
+If we want to binary search over a square, one of the good trick is we can choose the larger dimension (X or Y) to do our binary search.
