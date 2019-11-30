@@ -15,6 +15,7 @@ Very famous applications include the Uniform Cost Search and Heuristic Search (A
 
 ### Priority Queue
 ```python
+from Queue import PriorityQueue
         q = PriorityQueue()
         for node in lists:
             if node: q.put((node.val,node))
