@@ -24,3 +24,7 @@ from Queue import PriorityQueue
             curr=curr.next
             if curr.next: q.put((curr.next.val, curr.next))
 ```
+
+# Applications
+ + Priority Queue is a very common technique to work with the `N-lists` over a certain direction of optimiztion
+ + Priority Queue is a very common technique to work with the `search` where we can `quatify the cost` and use the Pri-Queue to select the next steps with lowest cost.
