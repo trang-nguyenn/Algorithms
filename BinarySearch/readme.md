@@ -7,7 +7,7 @@ https://github.com/python/cpython/blob/master/Lib/bisect.py#L15
 ## Bisect_left
 
 ```python
-def bisect_right(a, x, lo=0, hi=None):
+def bisect_left(a, x, lo=0, hi=None):
     while lo < hi:
         mid = (lo+hi)//2
         if a[mid] < x: lo = mid+1
