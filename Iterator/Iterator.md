@@ -1,6 +1,7 @@
 Iterator function syntax cause me trouble sometimes. We need:
 + A function with `yield` and `yield from`
-+ Define an iterator `it = func()` and call `it.next()` or `next(it)` for the next value
++ Define an iterator `it = func()` (critical, otherwise it will keep running)
++ Call `it.next()` or `next(it)` for the next value
 
 ```python
 def combination(chars, length):
