@@ -36,6 +36,7 @@ while l <= r:
         l = k + 1
     else:
         r = k - 1
+return max_square
 ```
 
 # Seach the answer
