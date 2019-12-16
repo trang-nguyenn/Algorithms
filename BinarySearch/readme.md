@@ -26,6 +26,17 @@ def bisect_right(a, x, lo=0, hi=None):
     return lo
 ```
 
+Not too sure if this is better
+```python
+while l <= r:
+    k = (l + r) / 2
+    cur_sum = func(k)
+    if cur_sum <= threshold:
+        max_square = max(max_square, k)
+        l = k + 1
+    else:
+        r = k - 1
+```
 
 # Seach the answer
 
