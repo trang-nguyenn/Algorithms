@@ -27,6 +27,7 @@ def bisect_right(a, x, lo=0, hi=None):
 ```
 
 Not too sure if this is better
+Credited to [LeetCode](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/discuss/451898/Python-Clean-code-PrefixSum-and-BinarySearch-in-O(m*n*log(min(mn))) )
 ```python
 while l <= r:
     k = (l + r) / 2
