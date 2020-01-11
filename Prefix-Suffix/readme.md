@@ -12,7 +12,10 @@ I find awe on the creativity of people to think about different data structure t
 n = len(nums)
 cumSum = [0] * (n+1)
 for i in range(n):
-      cumSum[i+1] = cumSum[i] + li[i]
+      cumSum[i+1] = cumSum[i] + nums[i]
+      
+      
+sum([nums[i] for i in range(minR, maxR)]) = cumSum[maxR+1]- cumSum[minR]
 ```
 
 ## 2D cumSum for a grid of numbers `grid`
@@ -25,5 +28,5 @@ for r in range(nrow):
     for c in range(ncol):
         cumSum[r+1][c+1] = cumSum[r][c+1] + cumSum[r+1][c] - cumSum[r][c] + grid[r][c]
 
-
+sum([nums[i][j] for i in range(minR, maxR) for j in range(minC, maxC)]) = cumSum[maxR+1][maxC+1] - cumSum[minR][maxC+1] - cumSum[maxR+1][minC] + cumSum[minR][minC]
 ```
