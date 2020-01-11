@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/199603552.svg)](https://zenodo.org/badge/latestdoi/199603552)
+
 
 # Algorithms
 
