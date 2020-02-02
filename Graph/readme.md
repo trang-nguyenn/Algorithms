@@ -129,3 +129,48 @@ class Solution(object):
         dfs(0, None)
         return [[n1, n2] for n1, n2 in connections if score[n1]>number[n2] or score[n2]>number[n1]]
 ```
+
+## Print all topological sort
+
+We use `dfs` and reduce `in_degree` together for this printing
+```python
+out_flow = {a: set() for a in Actions}
+indegree = {a: 0 for a in Actions}
+for first, second in Sequence:
+    out_flow[first].add(second)
+    indegree[second] += 1
+    
+ans = []
+def dfs(S):
+    if len(S) == 4:
+        ans.append(S)
+        return
+    queue = [a for a in sorted(Actions) if indegree[a]==0 and a not in S]
+    for a in queue:
+        for nxt in out_flow[a]: indegree[nxt] -= 1
+        dfs(S+[a])
+        for nxt in out_flow[a]: indegree[nxt] += 1
+```
+
+## Graph tranversal with dp 
+
+[Jump Game Problem](https://leetcode.com/problems/jump-game-v/)     
+DP relationship between nodes of the graph: `dp[node] = max(dp[node], 1 + max(dp[child] for child in graph[node]))`
+
+```python
+        dp = [1]*len(arr)
+        visited = set()
+        
+        def dfs(node):
+            visited.add(node)
+            for nei in graph[node]:
+                if nei not in visited:
+                    dfs(nei)
+                dp[node] = max(dp[node], 1+dp[nei])
+        
+        for node in range(len(arr)):  
+            if node not in visited:  
+                dfs(node)  
+
+        return max(dp)  
+```
