@@ -15,5 +15,7 @@ The problems are divided by categories of methods. We hope to use this materials
 - Looping Techniques with "sorted structure": [rectangle-area-ii](https://github.com/trang-nguyenn/Algorithms/blob/master/Heap_SortedStructure/850-rectangle-area-ii.md)
 - BFS Code: [all increasing-subsequences](https://github.com/trang-nguyenn/Algorithms/blob/master/DistinctSet/491-increasing-subsequences.md)
 - BFS Grid Search (take some times, but clean writing improves the code writing skills) [player-box-target](https://github.com/trang-nguyenn/Algorithms/blob/master/BFS/TO_BE_REVIEWED_minimum-moves-to-move-a-box-to-their-target-location.md)
-- Heap: Look at the heap folder [Heap with greedy approach](https://leetcode.com/problems/minimum-number-of-refueling-stops/)     
+- Heap:      
+  + Look at the heap folder [Heap with greedy approach](https://leetcode.com/problems/minimum-number-of-refueling-stops/)     
+  + Heap for non-sequential structure [Priority Queue] (https://leetcode.com/problems/minimize-deviation-in-array/)
 - Sliding Windows: An excellent example [Slidings Window](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/)
