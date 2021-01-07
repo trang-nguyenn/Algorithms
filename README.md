@@ -18,4 +18,5 @@ The problems are divided by categories of methods. We hope to use this materials
 - Heap:      
   + Look at the heap folder [Heap with greedy approach](https://leetcode.com/problems/minimum-number-of-refueling-stops/)     
   + Heap for non-sequential structure [Priority Queue](https://leetcode.com/problems/minimize-deviation-in-array/)
+  + Another example [Priority Queue](https://leetcode.com/problems/maximum-number-of-eaten-apples/)
 - Sliding Windows: An excellent example [Slidings Window](https://leetcode.com/problems/minimum-moves-to-make-array-complementary/)
